@@ -36,17 +36,16 @@ b) If you are passing strings directly you should give true as the bool value
 ```
 let buttonsArray = ["Save", "Settings", "Okay"]
         AlertManager.shared().show(true, message: "Test alert with multiple buttons", cancelButtonTitle: "Cancel", buttons: buttonsArray) { (index) in
-            if index == AlertManager.shared().alertCancelButtonIndex { 
+            if index == AlertManager.shared().alertCancelButtonIndex { // Remove this condition if cancelButtonTitle is sent as empty string ""
                 print("Cancel Button pressed")
                 return
             }
             
             print(buttonsArray[index])
-        }
+ }
  ```
         
  # Objective - C
- Alert with completion callback
  ```
      NSArray *buttonNames = @[@"Save", @"Settings", @"Okay"];
      [[AlertManager shared] show:true message:@"Message To Be Displayed" cancelButtonTitle:@"Okay" buttons:buttonNames completionCallBack:^(NSInteger index) {
@@ -57,7 +56,7 @@ let buttonsArray = ["Save", "Settings", "Okay"]
      
      NSLog(@"%@", buttonNames[index]);
      }];
-     ```
+```
         
  a) Remove the if condition if cancelButtonTitle is sent as empty string ""
         
@@ -67,6 +66,6 @@ let buttonsArray = ["Save", "Settings", "Okay"]
 ```
 let tupleList = [("Settings", { print("SettingsPressed") }), ("Save", { print("SavePressed") }), ("Okay", { print("OkayPressed") })]
         AlertManager.shared().show(true, message: "Test alert with multiple button tuples", buttons: tupleList)
-        ```
+ ```
         
         
