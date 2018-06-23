@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlertDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9p-B1-3iO">
+                                <rect key="frame" x="145" y="235.5" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6aH-QK-I41"/>
+                                </constraints>
+                                <state key="normal" title="Simple Alert"/>
+                                <connections>
+                                    <action selector="simpleAlertPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibd-dY-tZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKl-1h-s06">
+                                <rect key="frame" x="126" y="315.5" width="122" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="p8f-9r-Flh"/>
+                                </constraints>
+                                <state key="normal" title="Alert with handler"/>
+                                <connections>
+                                    <action selector="alertWithHandlerPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Y6-wf-pLa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vR-zc-LIc">
+                                <rect key="frame" x="132" y="401.5" width="110" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="AWo-2B-9pO"/>
+                                </constraints>
+                                <state key="normal" title="Alert With Tuple"/>
+                                <connections>
+                                    <action selector="alertTuplePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNn-X0-aw1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BKl-1h-s06" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1UN-uC-hTf"/>
+                            <constraint firstItem="BKl-1h-s06" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1cP-vh-yEx"/>
+                            <constraint firstItem="K9p-B1-3iO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dl6-6p-c56"/>
+                            <constraint firstItem="BKl-1h-s06" firstAttribute="top" secondItem="K9p-B1-3iO" secondAttribute="bottom" constant="50" id="V8V-kc-Nce"/>
+                            <constraint firstItem="4vR-zc-LIc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDX-5A-Z84"/>
+                            <constraint firstItem="4vR-zc-LIc" firstAttribute="top" secondItem="BKl-1h-s06" secondAttribute="bottom" constant="50" id="pUd-uo-SkS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="125.4872563718141"/>
+        </scene>
+    </scenes>
+</document>
